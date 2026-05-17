@@ -6,6 +6,11 @@
 [![Goal Planner — goal.ruv.io](https://img.shields.io/badge/_Goal_Planner-goal.ruv.io-8b5cf6?style=for-the-badge&logoColor=white&logo=react)](https://goal.ruv.io/)
 [![Live Agents — goal.ruv.io/agents](https://img.shields.io/badge/_Live_Agents-goal.ruv.io%2Fagents-10b981?style=for-the-badge&logoColor=white&logo=react)](https://goal.ruv.io/agents)
 
+[![npm version (ruflo)](https://img.shields.io/npm/v/ruflo?label=ruflo&style=for-the-badge&logo=npm&color=cb3837)](https://www.npmjs.com/package/ruflo)
+[![npm downloads (ruflo)](https://img.shields.io/npm/dm/ruflo?label=ruflo%20downloads&style=for-the-badge&logo=npm&color=cb3837)](https://www.npmjs.com/package/ruflo)
+[![npm version (claude-flow)](https://img.shields.io/npm/v/claude-flow?label=claude-flow&style=for-the-badge&logo=npm&color=blue)](https://www.npmjs.com/package/claude-flow)
+[![npm downloads (claude-flow)](https://img.shields.io/npm/dm/claude-flow?label=claude-flow%20downloads&style=for-the-badge&logo=npm&color=blue)](https://www.npmjs.com/package/claude-flow)
+
 [![Star on GitHub](https://img.shields.io/github/stars/ruvnet/claude-flow?style=for-the-badge&logo=github&color=gold)](https://github.com/ruvnet/claude-flow)
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-D97757?style=for-the-badge&logoColor=white&logo=anthropic)](https://github.com/ruvnet/claude-flow)
@@ -156,11 +161,17 @@ This adds slash commands and agent definitions only. The Ruflo MCP server is NOT
 
 ### CLI Install
 
-```bash
-# One-line install
-curl -fsSL https://cdn.jsdelivr.net/gh/ruvnet/ruflo@main/scripts/install.sh | bash
+**macOS / Linux / WSL / Git-Bash:**
 
-# Or via npx (interactive setup)
+```bash
+# One-line install (POSIX shells only — see Windows note below)
+curl -fsSL https://cdn.jsdelivr.net/gh/ruvnet/ruflo@main/scripts/install.sh | bash
+```
+
+**All platforms (including native Windows PowerShell / cmd):**
+
+```bash
+# Interactive setup wizard — runs identically on every platform
 npx ruflo@latest init wizard
 
 # Quick non-interactive init
@@ -169,6 +180,8 @@ npx ruflo@latest init wizard
 # Or install globally
 npm install -g ruflo@latest
 ```
+
+> 💡 **Windows users:** the `curl ... | bash` form needs a POSIX shell (Git-Bash, WSL, MSYS). The `npx ruflo@latest init wizard` line works natively in PowerShell and cmd. If you hit an `'bash' is not recognized` error, use the `npx` line instead — both end up running the same init flow.
 
 ### MCP Server
 
